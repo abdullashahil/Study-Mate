@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-ty6!qrq3*l!ntc@m#yv8zaw-j0%=^m#piv95ri=^$4fuj2v)s%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['study-mate-yxr2.onrender.com', 'localhost']
+
 
 
 # Application definition
