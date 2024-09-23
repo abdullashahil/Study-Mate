@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ty6!qrq3*l!ntc@m#yv8zaw-j0%=^m#piv95ri=^$4fuj2v)s%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['study-mate-yxr2.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['study-mate-yxr2.onrender.com', 'localhost', '127.0.0.1']
 
 
 
@@ -53,7 +53,7 @@ AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "corsheaders.middleware.CorsMiddleware",
 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'studymate.urls'
 
@@ -132,14 +133,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/images/'
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
+
+# MEDIA_ROOT = BASE_DIR / 'static/images'
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',  # This is where your static files are stored
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Add this line
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
