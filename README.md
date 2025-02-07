@@ -1,4 +1,5 @@
 # StudyMate
+## Deployed - 🔗[Click Here](https://study-mate-yxr2.onrender.com/login/?next=/)
 
 **StudyMate** is an online learning hub that provides a platform for learners to connect and collaborate based on their specific areas of interest. It offers a unique experience for those wishing to learn new topics through online conversations, with dedicated rooms (groups) focused on various subjects. StudyMate encourages knowledge sharing, discussion, and community-driven learning, allowing users to easily find and join rooms that match their learning interests.
 
